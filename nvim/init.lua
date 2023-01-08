@@ -29,7 +29,8 @@ local config = {
     },
 
     -- Set colorscheme to use
-    colorscheme = "everforest",
+    colorscheme = "github",
+    -- colorscheme = "edge",
     -- colorscheme = "onedark",
     -- colorscheme = "nord",
     -- colorscheme = "everforest",
@@ -61,6 +62,7 @@ local config = {
             spell = false, -- sets vim.opt.spell
             signcolumn = "auto", -- sets vim.opt.signcolumn to auto
             wrap = false, -- sets vim.opt.wrap
+            background = "light",
         },
         g = {
             mapleader = " ", -- sets vim.g.mapleader
@@ -268,6 +270,34 @@ local config = {
             { "rose-pine/neovim" },
             { "GlennLeo/cobalt2" },
             { "Rigellute/rigel" },
+            { "cocopon/iceberg.vim" },
+            { "sonph/onehalf" },
+            { "NLKNguyen/papercolor-theme" },
+            { "cormacrelf/vim-colors-github" },
+            { "lifepillar/vim-solarized8" },
+            { "jonathanfilip/vim-lucius" },
+            { "relastle/bluewery.vim" },
+            { "baskerville/bubblegum" },
+            { "arzg/vim-corvine" },
+            { "ericbn/vim-solarized" },
+            { "romgrk/github-light.vim" },
+            { "chiendo97/intellij.vim" },
+            { "alxhnr/clear_colors" },
+            { "wimstefan/vim-artesanal" },
+            { "jakwings/vim-colors" },
+            { "conweller/endarkened.vim" },
+            { "jaimebuelta/jaime-vim-colorscheme" },
+            { "cesardeazevedo/fx-colorscheme" },
+            { "datmaffin/vim-colors-bionik" },
+            { "mg979/vim-studio-dark" },
+            { "yasukotelin/notelight" },
+            { "casperstorm/sort-hvid.vim" },
+            { "vim-scripts/lingodirector.vim--pawlik" },
+            { "cseelus/vim-colors-lanai" },
+            { "vim-scripts/blue_sky" },
+            { "vim-scripts/dual.vim" },
+            { "macguirerintoul/night_owl_light.vim" },
+            { "nonlogicaldev/vim-jasmine-colortheme" },
         },
         -- All other entries override the require("<key>").setup({...}) call for default plugins
         ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
