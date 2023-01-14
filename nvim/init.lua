@@ -1,6 +1,3 @@
--- For use with AstroNvim only
--- Should be in ~/.config/nvim/lua/user/init.lua
---
 --              AstroNvim Configuration Table
 -- All configuration changes should go inside of the table below
 
@@ -12,7 +9,7 @@ local config = {
     -- Configure AstroNvim updates
     updater = {
         remote = "origin", -- remote to use
-        channel = "nightly", -- "stable" or "nightly"
+        channel = "stable", -- "stable" or "nightly"
         version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
         branch = "main", -- branch name (NIGHTLY ONLY)
         commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -30,15 +27,11 @@ local config = {
 
     -- Set colorscheme to use
     colorscheme = "github",
-    -- colorscheme = "edge",
-    -- colorscheme = "onedark",
     -- colorscheme = "nord",
     -- colorscheme = "everforest",
     -- colorscheme = "gruvbox-material",
-    -- colorscheme = "edge",
     -- colorscheme = "sonokai",
-    -- colorscheme = "nightfox",
-    -- colorscheme = "rose-pine",
+    -- colorscheme = "edge",
     -- colorscheme = "cobalt2",
     -- colorscheme = "rigel",
     -- colorscheme = "default_theme",
@@ -255,49 +248,21 @@ local config = {
             --     require("lsp_signature").setup()
             --   end,
             -- },
-            { "HerringtonDarkholme/yats.vim" }, -- better highlitung for .ts and .tsx
+            -- { "HerringtonDarkholme/yats.vim" }, -- better highlitung for .ts and .tsx
             -- { "pantharshit00/vim-prisma" }, -- for Prisma configuration editing
+            -- { "tpope/vim-fugitive" }, -- for comapring two branches, etc.
             { "mattn/emmet-vim" }, -- better HTML editing
-            { "tpope/vim-fugitive" }, -- for comapring two branches, etc.
             -- colorschemes:
-            { "joshdick/onedark.vim" },
             { "arcticicestudio/nord-vim" },
             { "sainnhe/everforest" },
             { "sainnhe/edge" },
             { "sainnhe/gruvbox-material" },
             { "sainnhe/sonokai" },
-            { "EdenEast/nightfox.nvim" },
-            { "rose-pine/neovim" },
             { "GlennLeo/cobalt2" },
             { "Rigellute/rigel" },
-            { "cocopon/iceberg.vim" },
-            { "sonph/onehalf" },
-            { "NLKNguyen/papercolor-theme" },
             { "cormacrelf/vim-colors-github" },
-            { "lifepillar/vim-solarized8" },
-            { "jonathanfilip/vim-lucius" },
-            { "relastle/bluewery.vim" },
-            { "baskerville/bubblegum" },
-            { "arzg/vim-corvine" },
-            { "ericbn/vim-solarized" },
-            { "romgrk/github-light.vim" },
-            { "chiendo97/intellij.vim" },
-            { "alxhnr/clear_colors" },
-            { "wimstefan/vim-artesanal" },
-            { "jakwings/vim-colors" },
             { "conweller/endarkened.vim" },
-            { "jaimebuelta/jaime-vim-colorscheme" },
-            { "cesardeazevedo/fx-colorscheme" },
-            { "datmaffin/vim-colors-bionik" },
             { "mg979/vim-studio-dark" },
-            { "yasukotelin/notelight" },
-            { "casperstorm/sort-hvid.vim" },
-            { "vim-scripts/lingodirector.vim--pawlik" },
-            { "cseelus/vim-colors-lanai" },
-            { "vim-scripts/blue_sky" },
-            { "vim-scripts/dual.vim" },
-            { "macguirerintoul/night_owl_light.vim" },
-            { "nonlogicaldev/vim-jasmine-colortheme" },
         },
         -- All other entries override the require("<key>").setup({...}) call for default plugins
         ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
