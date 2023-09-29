@@ -120,18 +120,12 @@ export PATH="$PATH:$(go env GOPATH)/bin:$HOME/.rvm/bin"
 
 eval $(thefuck --alias)
 
-PROMPT="%B%(?:%{$fg_bold[green]%}[%*]:%{$fg_bold[red]%}[%*])%b "
-PROMPT+='%B%{$fg[cyan]%}%~%b '
-PROMPT+='%F{241}'
-PROMPT+='$(rvm-prompt) | '
-PROMPT+='node:$(nvm current)'
-PROMPT+=$'\n'
-PROMPT+="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜)%{$reset_color%} "
-PROMPT+='$(git_prompt_info)'
+PROMPT='%B%(?:%F{green}╭─:%F{#F44}╭─)%F{#8D8} %* %F{#6A6}%~ %b%F{#888}$(rvm-prompt) | node:$(nvm current)
+%B%(?:%F{green}╰─:%F{#F44}╰─) %F{cyan}%c$(git_prompt_info) %B%(?:%F{green}➜:%F{#F44}➜)%b%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+ZSH_THEME_GIT_PROMPT_PREFIX="%b%F{cian}:%B%F{red}"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}✱"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 source /etc/zsh_command_not_found
