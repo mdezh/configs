@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias nv=nvim
 alias r=rails
+alias bat=batcat
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -120,12 +121,15 @@ export PATH="$PATH:$(go env GOPATH)/bin:$HOME/.rvm/bin"
 
 eval $(thefuck --alias)
 
-PROMPT='%B%(?:%F{green}╭─:%F{#F44}╭─)%F{#8D8} %* %F{#6A6}%~ %b%F{#888}$(rvm-prompt) | node:$(nvm current)
-%B%(?:%F{green}╰─:%F{#F44}╰─) %F{cyan}%c$(git_prompt_info) %B%(?:%F{green}➜:%F{#F44}➜)%b%{$reset_color%} '
+# PROMPT='%B%(?:%F{#8D8}:%F{#F44})╭─[%*] %F{#6A6}%n@%m:%F{#78A}%~ %b%F{#888}$(rvm-prompt) | node:$(nvm current)
+# %B%(?:%F{#8D8}:%F{#F44})╰─ %F{cyan}%c$(git_prompt_info)⬮ %B%(?:%F{#8D8}:%F{#F44})➜%b%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%b%F{cian}:%B%F{red}"
+PROMPT='%B%(?:%F{#8D8}:%F{#F44})┃%* %F{#6A6}%n@%m:%F{#78A}%~ %b%F{#888}$(rvm-prompt) | node:$(nvm current)
+%B%(?:%F{#8D8}:%F{#F44})┃%F{cyan}%c$(git_prompt_info) %F{888}$ %{$reset_color%}'
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" %B%F{red}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}✱"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}⚑"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 source /etc/zsh_command_not_found
