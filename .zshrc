@@ -129,7 +129,7 @@ PROMPT='%B%(?:%F{#8D8}:%F{#F44})┃%* %F{#6A6}%n@%m:%F{#78A}%~ %b%F{#888}$(rvm-p
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %B%F{red}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}⚑"
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{#FF0}⚑"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 source /etc/zsh_command_not_found
